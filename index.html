@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicFlow - Practice Management Made Simple</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0066CC 0%, #004C99 100%); }
+        .hover-lift { transition: transform 0.2s, box-shadow 0.2s; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <span class="ml-2 text-2xl font-bold text-gray-900">ClinicFlow</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600">Pricing</a>
+                    <a href="#demo" class="text-gray-700 hover:text-blue-600">Demo</a>
+                    <a href="dashboard.html" class="text-gray-700 hover:text-blue-600">Login</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="dashboard.html" class="hidden md:block text-blue-600 hover:text-blue-700">Login</a>
+                    <a href="dashboard.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Transform Your Medical Practice in 7 Days</h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                    ClinicFlow is Pakistan's most trusted practice management software. 
+                    Used by 2,500+ clinics to manage 1M+ patients monthly.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="dashboard.html" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 inline-block">
+                        Start Free 14-Day Trial
+                    </a>
+                    <a href="#demo" class="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 inline-block">
+                        Watch 2-Min Demo
+                    </a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8 text-sm">
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        DRAP Compliant
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        Bank-Grade Security
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        24/7 Support
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        Works Offline
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Are You Still Managing Your Clinic Like It's 1995?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-red-50 hover-lift">
+                    <div class="text-5xl mb-4">📋</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Drowning in Paper Files?</h3>
+                    <p class="text-gray-600">Lost patient records, no search capability, chaos during peak hours</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-orange-50 hover-lift">
+                    <div class="text-5xl mb-4">📞</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Wasting Hours on Phone Calls?</h3>
+                    <p class="text-gray-600">Manual appointment booking, missed calls, double bookings</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-yellow-50 hover-lift">
+                    <div class="text-5xl mb-4">💊</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Struggling with Expired Medicines?</h3>
+                    <p class="text-gray-600">No stock tracking, compliance nightmares, revenue loss</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#features" class="text-blue-600 text-lg font-semibold hover:text-blue-700">There's a Better Way →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Everything You Need to Run a Modern Medical Practice</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Powerful features designed specifically for Pakistani healthcare providers</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-lift">
+                    <div class="text-4xl mb-4">🗂️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Smart Patient Records</h3>
+                    <p class="text-gray-600">Find any patient in 3 seconds. Complete medical history, prescriptions, test reports - all in one place.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-lift">
+                    <div class="text-4xl mb-4">📅</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Intelligent Scheduling</h3>
+                    <p class="text-gray-600">Automatic WhatsApp reminders reduce no-shows by 60%. Drag-and-drop rescheduling.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-lift">
+                    <div class="text-4xl mb-4">💊</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Inventory on Autopilot</h3>
+                    <p class="text-gray-600">Never run out of essential medicines. Auto-alerts before expiry. DRAP-compliant tracking.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-lift">
+                    <div class="text-4xl mb-4">💳</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Faster Billing</h3>
+                    <p class="text-gray-600">Generate invoices in seconds. Accept Easypaisa, JazzCash, insurance. Automatic tax reports.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-lift">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">AI Prescription Assistant</h3>
+                    <p class="text-gray-600">Type 'para' → Get full Paracetamol prescription template. Drug interaction warnings. Generic alternatives.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-lift">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Growth Insights</h3>
+                    <p class="text-gray-600">Know exactly which services make money. Patient trends. Doctor performance. Revenue forecasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Highlight -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Powered by Artificial Intelligence</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-semibold mb-3">Smart Prescriptions</h3>
+                    <p class="text-blue-100">AI suggests medicines based on diagnosis. Warns about drug interactions. Saves 5 minutes per patient.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-semibold mb-3">Predictive Analytics</h3>
+                    <p class="text-blue-100">Know which patients are at risk. Forecast revenue. Identify disease outbreaks in your area.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl mb-4">💬</div>
+                    <h3 class="text-2xl font-semibold mb-3">WhatsApp Chatbot</h3>
+                    <p class="text-blue-100">Patients can book, reschedule, or get their prescription via WhatsApp. No app download needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Simple, Transparent Pricing</h2>
+            <p class="text-center text-gray-600 mb-12">Choose the plan that fits your practice size. Upgrade, downgrade, or cancel anytime.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Starter</h3>
+                    <p class="text-gray-600 mb-6">Perfect for solo practitioners</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">Rs 8,000</span>
+                        <span class="text-gray-600">/month</span>
+                        <div class="text-sm text-gray-500 mt-1">$28/month (USD)</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">1 doctor account</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">300 active patients</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Unlimited appointments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Basic prescriptions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Mobile app access</span>
+                        </li>
+                    </ul>
+                    <a href="dashboard.html" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700">
+                        Start Free Trial
+                    </a>
+                </div>
+
+                <!-- Professional Plan (Most Popular) -->
+                <div class="bg-white border-4 border-blue-600 rounded-lg p-8 hover-lift relative">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-sm font-semibold rounded-bl-lg rounded-tr-lg">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Professional</h3>
+                    <p class="text-gray-600 mb-6">For growing clinics</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">Rs 18,000</span>
+                        <span class="text-gray-600">/month</span>
+                        <div class="text-sm text-gray-500 mt-1">$62/month (USD)</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">3 doctor accounts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">1,500 active patients</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">AI prescription assistant</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Inventory management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">WhatsApp reminders (unlimited)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Advanced reports & analytics</span>
+                        </li>
+                    </ul>
+                    <a href="dashboard.html" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700">
+                        Start Free Trial
+                    </a>
+                </div>
+
+                <!-- Clinic Chain Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Clinic Chain</h3>
+                    <p class="text-gray-600 mb-6">For multi-location practices</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">Rs 35,000</span>
+                        <span class="text-gray-600">/month</span>
+                        <div class="text-sm text-gray-500 mt-1">$120/month (USD)</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Unlimited doctors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Unlimited patients</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">Multi-location management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">WhatsApp chatbot</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">API access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="text-gray-700">24/7 phone support</span>
+                        </li>
+                    </ul>
+                    <a href="dashboard.html" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700">
+                        Schedule Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-600">All plans include 14-day free trial. No credit card required.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Trusted by Leading Medical Practices Across Pakistan</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">2,500+</div>
+                    <div class="text-gray-600">Clinics</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">1M+</div>
+                    <div class="text-gray-600">Patients Managed</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">15M+</div>
+                    <div class="text-gray-600">Prescriptions Generated</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">4.8/5</div>
+                    <div class="text-gray-600">Customer Rating</div>
+                </div>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+                <p class="text-xl text-gray-700 italic mb-6">"We reduced patient wait time by 40% and increased monthly revenue by Rs 2 lakhs just by getting organized. ClinicFlow paid for itself in the first month."</p>
+                <div class="flex items-center">
+                    <div class="h-12 w-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">DR</div>
+                    <div>
+                        <div class="font-semibold text-gray-900">Dr. Ahmed Raza</div>
+                        <div class="text-gray-600">City Clinic Lahore</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Compliance -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Your Data is Safer Than a Bank Vault</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">256-bit Encryption</h3>
+                    <p class="text-gray-600">Same encryption used by banks worldwide</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl mb-4">✅</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">DRAP Compliance</h3>
+                    <p class="text-gray-600">Built-in compliance with Pakistani regulations</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl mb-4">💾</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Daily Backups</h3>
+                    <p class="text-gray-600">Your data is automatically backed up every day</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Modernize Your Practice?</h2>
+            <p class="text-xl mb-8 text-blue-100">Join 2,500+ clinics already using ClinicFlow</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="dashboard.html" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 inline-block">
+                    Start Your Free Trial
+                </a>
+                <a href="#pricing" class="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 inline-block">
+                    Schedule a Personal Demo
+                </a>
+            </div>
+            <p class="mt-6 text-blue-100">No credit card required. Setup in 15 minutes. Cancel anytime.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+                        <li><a href="dashboard.html" class="hover:text-white">Demo</a></li>
+                        <li><a href="#" class="hover:text-white">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">API Docs</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white">Security</a></li>
+                        <li><a href="#" class="hover:text-white">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2026 ClinicFlow. Made with ❤️ in Pakistan.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
